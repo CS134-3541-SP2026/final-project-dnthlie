@@ -1,4 +1,4 @@
-package edu.cs134.finalproject
+package edu.cs134.storybook
 
 import org.junit.Test
 

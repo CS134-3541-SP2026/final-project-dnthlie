@@ -1,4 +1,4 @@
-package edu.cs134.finalproject
+package edu.cs134.storybook
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
