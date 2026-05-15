@@ -1,5 +1,6 @@
 package edu.cs134.storybook.viewmodel
 
+import android.content.Context
 import androidx.lifecycle.ViewModel
 import edu.cs134.storybook.model.Page
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -11,23 +12,28 @@ class StoryBookViewModel : ViewModel() {
     val pages: StateFlow<List<Page>> = _pages
 
     fun addPage(page: Page) {
-        // TODO:
+        val currentPages = _pages.value.toMutableList()
+        val newPage = page.copy(pageNumber = currentPages.size + 1)
+        currentPages.add(newPage)
+        _pages.value = currentPages
     }
 
     fun deletePage(page: Page) {
-        // TODO:
+        val currentPages = _pages.value.toMutableList()
+        currentPages.remove(page)
+        _pages.value = currentPages
     }
 
-    fun updatePage(page: Page) {
-        // TODO:
-    }
-
-    fun saveStory() {
-        // TODO:
-    }
-
-    fun loadStory() {
-        // TODO:
-    }
+//    fun updatePage(updatedPage: Page) {
+//        // TODO:
+//    }
+//
+//    fun saveStory(context: Context) {
+//        // TODO:
+//    }
+//
+//    fun loadStory(context: Context) {
+//        // TODO:
+//    }
 
 }
