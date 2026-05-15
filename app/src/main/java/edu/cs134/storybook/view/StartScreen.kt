@@ -47,7 +47,9 @@ fun StartScreen(
 
         // EDIT PANEL
         Button (
-            onClick = onEditPanel
+            onClick = onEditPanel,
+            // TEST: REMOVE COMMENT LATER. DISABLE SHOWS, BUT NEED TO TEST FURTHER WHEN STORY IS CREATED
+            // enabled = hasStory
         ) {
             Text("Edit Current Story")
         }
@@ -56,7 +58,9 @@ fun StartScreen(
 
         // READ STORY
         Button (
-            onClick = onViewStory
+            onClick = onViewStory,
+            // TEST: REMOVE COMMENT LATER. DISABLE SHOWS, BUT NEED TO TEST FURTHER WHEN STORY IS CREATED
+            //enabled = hasStory
         ) {
             Text("Read your Story")
         }
