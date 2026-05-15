@@ -22,9 +22,14 @@ fun StartScreen(
     onViewStory: () -> Unit,
     modifier: Modifier = Modifier
 ) {
-    val hasStory = viewModel.pages.collectAsState().value.isNotEmpty()                   // FOR DISABLING EDIT AND READ BUTTONS WHEN NO STORY EXISTSS
+    val hasStory = viewModel.pages.collectAsState().value.isNotEmpty()
 
-    Column {
+    Column(
+        modifier = modifier
+            .fillMaxSize()
+            .padding(16.dp),
+        verticalArrangement = Arrangement.Center
+    ) {
         Text("Create Your Storyboard")
 
         Spacer(modifier = Modifier.height(16.dp))
@@ -36,12 +41,16 @@ fun StartScreen(
             Text("Create New Story")
         }
 
-        // EDIT STORY
+        Spacer(modifier = Modifier.height(8.dp))
+
+        // EDIT PANEL
         Button (
             onClick = onEditPanel
         ) {
             Text("Edit Current Story")
         }
+
+        Spacer(modifier = Modifier.height(8.dp))
 
         // READ STORY
         Button (
