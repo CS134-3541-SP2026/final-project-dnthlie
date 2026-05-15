@@ -24,10 +24,15 @@ fun ViewStoryScreen(
             .fillMaxSize()
             .padding(16.dp)
     ) {
+        // TITLE NO BUTTONS
         Text("View Story")
 
         Spacer(modifier = Modifier.height(16.dp))
 
+        // MIDDLE - IMAGE + TEXT SLIDE SHOW
+        // todo:
+
+        // FIXME: BOTTOM BUTTONS (+)
         // MAIN SCREEN
         Button (
             onClick = onStartScreen

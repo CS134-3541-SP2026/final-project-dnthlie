@@ -24,10 +24,15 @@ fun StoryPanelScreen(
             .fillMaxSize()
             .padding(16.dp)
     ) {
+        // TITLE NO BUTTONS
         Text("StoryBoard Panel")
 
         Spacer(modifier = Modifier.height(16.dp))
 
+        // PANELS TO SCROLL THROUGH
+        // todo:
+
+        // FIXME: BOTTOM BUTTONS (+)
         // MAIN SCREEN
         Button (
             onClick = onStartScreen
