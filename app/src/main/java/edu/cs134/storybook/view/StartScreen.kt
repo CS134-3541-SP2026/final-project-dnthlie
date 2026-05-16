@@ -25,6 +25,7 @@ fun StartScreen(
 ) {
     val hasStory = viewModel.pages.collectAsState().value.isNotEmpty()
 
+    // TODO: FIX UI LATER. BASIC NAV. BUTTONS WORK TO CHANGE SCREENS
     Column(
         modifier = modifier
             .fillMaxSize()
@@ -32,6 +33,7 @@ fun StartScreen(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
+        // TITLE FIXME: FIX UI LATER
         Text("Create Your Storyboard")
 
         Spacer(modifier = Modifier.height(16.dp))
